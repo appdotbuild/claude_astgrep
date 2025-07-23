@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# WIP files
+rules
+positive
+negative
+
+# Claude config
+.claude/settings.local.json

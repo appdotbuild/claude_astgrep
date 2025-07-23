@@ -1,0 +1,12 @@
+[project]
+name = "claude-astgrep"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ast-grep-cli>=0.39.1",
+]

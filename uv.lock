@@ -1,0 +1,33 @@
+version = 1
+revision = 2
+requires-python = ">=3.12"
+
+[[package]]
+name = "ast-grep-cli"
+version = "0.39.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/3e/44b61cfc15a2b4015a15cc0877cffe2539b7759949e898c9c184d534bc0d/ast_grep_cli-0.39.1.tar.gz", hash = "sha256:51ba6ea36f9d93b05fc892a005358f1e1de4acfbe8293af8b1e5105ece2320bb", size = 204965, upload-time = "2025-07-21T03:33:49.992Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b0/2f/3222d27f2933f9371a5d9a4a3db7a6e823f69630f3bd74bf6b53907bf5f4/ast_grep_cli-0.39.1-py3-none-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:02f4320aad37fe0c02c2f924754e4117c81ee845b8d6e8b6042c23ebc1514416", size = 13816584, upload-time = "2025-07-21T03:33:37.024Z" },
+    { url = "https://files.pythonhosted.org/packages/64/f6/5166c08ec8c29aa86bdc5f2960018a615b3dc8135751ad2221a729d9903d/ast_grep_cli-0.39.1-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:be0705b30a08f8e180a71f52bb81c3b433f94b3734919e827bd5478ce4f7a67d", size = 6937048, upload-time = "2025-07-21T03:33:39.615Z" },
+    { url = "https://files.pythonhosted.org/packages/c3/09/49f2f55ff2ac745caf1132db67ebbe0bcecd944ff3ee5a5217d065d2b1e8/ast_grep_cli-0.39.1-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:8740a682ec448f5c7fbbc19de8da3a493380187c636f56d510fcc2a49459f9cc", size = 6725725, upload-time = "2025-07-21T03:33:41.48Z" },
+    { url = "https://files.pythonhosted.org/packages/75/7d/e5f85c4ad594685e2ef65022c4061b4d2462e52a394d3b7df43fa79265de/ast_grep_cli-0.39.1-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:73a9c644c8e29994bdd1a21b4db691f1b77f3f03f2421cec441b89ac3acd6c8f", size = 7095847, upload-time = "2025-07-21T03:33:42.933Z" },
+    { url = "https://files.pythonhosted.org/packages/e9/0d/26d8680f7d1ea292386b8a364764f3d6f698ea7254b32641886e460a0cce/ast_grep_cli-0.39.1-py3-none-win32.whl", hash = "sha256:6b0343c950997a160b04cf672e53617fd199612b2ed130a3bdc064fb58f9283c", size = 6643251, upload-time = "2025-07-21T03:33:45.239Z" },
+    { url = "https://files.pythonhosted.org/packages/87/9c/1e8e9a5500179a2bfc75f0ac559babe8f99d53ffa7bb0bfacc6bccb181b8/ast_grep_cli-0.39.1-py3-none-win_amd64.whl", hash = "sha256:f4f6300830b84f71ff38e11af706b758e0c1dfdf7d148aa6625217e9ba465a1f", size = 6970299, upload-time = "2025-07-21T03:33:46.945Z" },
+    { url = "https://files.pythonhosted.org/packages/6b/76/c96dcb20efce9f56c5551b82b25111fdf99df30be7f399c9c9e3f3462dba/ast_grep_cli-0.39.1-py3-none-win_arm64.whl", hash = "sha256:c055969b88fad7fb2421c81c8f2c8980ae249f890090e2fc020345dadd855769", size = 6660442, upload-time = "2025-07-21T03:33:48.446Z" },
+]
+
+[[package]]
+name = "claude-astgrep"
+version = "0.1.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "ast-grep-cli" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ast-grep-cli", specifier = ">=0.39.1" }]
