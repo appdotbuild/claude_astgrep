@@ -47,6 +47,52 @@ Claude creates rules that enforce these automatically.
 Generated rules are validated during generatation and can be tested against your codebase.
 With Claude Code hooks, you can apply them automatically during code generation. Furtermore, consider integrating them into your CI/CD pipeline to automatically enforce coding standards.
 
+## Rule examples
+
+### Disallow silent exception handling in Python
+```python
+id: require-exception-logging
+message: Exception handlers should include logging for observability
+severity: error
+language: python
+rule:
+  pattern: |
+    try:
+      $$$
+    except $$$:
+      $$$BODY
+  not:
+    has:
+      pattern: $$$BODY
+      any:
+        - regex: ".*log.*"
+        - regex: ".*logger.*"
+        - regex: ".*raise.*"
+```
+
+### Disallow empty string values in Select components (React)
+```
+id: no-empty-select-value
+language: tsx
+message: Select item components cannot have an empty string as value. Use a meaningful default value.
+severity: error
+rule:
+  all:
+    - pattern:
+        context: '<$COMP value="" $$$ATTRS />'
+        selector: jsx_attribute
+    - inside:
+        any:
+          - kind: jsx_self_closing_element
+            has:
+              kind: identifier
+              regex: '^(Select|Option|MenuItem|DropdownMenuItem|RadioGroupItem|.*Select.*|.*Option.*)'
+          - kind: jsx_opening_element
+            has:
+              kind: identifier
+              regex: '^(Select|Option|MenuItem|DropdownMenuItem|RadioGroupItem|.*Select.*|.*Option.*)'
+```
+
 ## Resources
 
 - [ast-grep documentation](https://ast-grep.github.io/)
